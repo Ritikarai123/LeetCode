@@ -1,3 +1,4 @@
+//using string with more time complexity
 class Solution {
     public String mergeAlternately(String word1, String word2) {
         String s="";
@@ -15,7 +16,19 @@ class Solution {
          for(int j=i;j<word1.length();j++)
         s=s+word1.charAt(j); 
       }
-
         return s;
     }
 }
+
+//using Stringbuffer with less time complexity
+ StringBuffer s=new StringBuffer();
+    int i=0,j=0;
+    while(i!=word1.length() || j!=word2.length()){
+        if(i!=word1.length())
+        s=s.append(word1.charAt(i++));
+        if(j!=word2.length())
+        s=s.append(word2.charAt(j++));
+
+    }
+    return s.toString();
+        }
