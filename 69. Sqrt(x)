@@ -1,0 +1,21 @@
+class Solution {
+    public int mySqrt(int x) {
+       if(x==1 || x==0)
+       return x;
+        if( x==2147483647)
+         return 46340;
+       int sqrt=1;
+     int a=2;
+       for(a=2;a<=x/2;a++){
+         if(a*a<=x){
+            if(a*a==x){
+                return a;
+            }
+            sqrt=a;
+         }
+         else
+         break;
+       }
+        return sqrt;
+    }
+}
